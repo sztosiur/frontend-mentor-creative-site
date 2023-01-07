@@ -401,9 +401,7 @@ footer{
     /*
     Doing NAV For MOBILES
     */ 
-    .main-nav{
-        display:none;
-    }
+    
     .nav-btn{
         display:block;
         width:4rem;
@@ -413,35 +411,37 @@ footer{
         border:none;
         cursor:pointer;
     }
-    .navigation_mobile{
-        position: relative;
-        
-    }
+    
     .main-nav__mobile{
+        display:none;
+    
+    }
+    .main-nav.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:5rem;
+        justify-content: center;
         background: url("images/mobile/menu-bg.png") no-repeat center top;
         background-size: cover;
-        display: none;
         width:80vw;
-        min-height:30vh;
-        max-height: 60vh;
+        height: 60vh;
         position: absolute;
-        right:2.5rem;
+        right:5rem;
         color:var(--primary-dark-blue);
-        font-size: 1.8rem;
-        
+        font-size: 1.8rem; 
+        text-align: center;
     }
-    .navigation_mobile:hover .main-nav__mobile,
-    .navigation_mobile:active .main-nav__mobile{
-        
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            
-    }
-    .main-nav-link:hover,
-    .main-nav-link:active{
+    
+        .main-nav-link:hover,
+        .main-nav-link:active{
         background-color: var(--primary-yellow);
+        border-radius: 2rem;
+        font-family: var(--accent-font);
+        text-align: center;
+
+        
+        
     }
     .main-nav-link{
         width:15rem;
